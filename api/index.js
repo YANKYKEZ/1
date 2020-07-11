@@ -8,7 +8,7 @@ const PORT = 4000;
 
 // mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://mongo:27017/crm', {
+mongoose.connect('mongodb+srv://roort:root@cluster0.wlor8.mongodb.net/root?retryWrites=true&w=majority', {
     useMongoClient: true
 });
 

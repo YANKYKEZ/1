@@ -2,10 +2,10 @@ sudo: required
 services:
   - docker
 script:
-  - docker build -t mongo .
+  - docker build -t client .
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-  - docker tag mongo $DOCKER_USER/mongo:$TRAVIS_BUILD_NUMBER
-  - docker push $DOCKER_USER/mongo:$TRAVIS_BUILD_NUMBER
-  - docker tag mongo $DOCKER_USER/mongo:latest
-  - docker push $DOCKER_USER/mongo:latest
+  - docker tag client $DOCKER_USER/client:$TRAVIS_BUILD_NUMBER
+  - docker push $DOCKER_USER/client:$TRAVIS_BUILD_NUMBER
+  - docker tag client $DOCKER_USER/client:latest
+  - docker push $DOCKER_USER/client:latest

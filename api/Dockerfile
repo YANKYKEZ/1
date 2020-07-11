@@ -8,5 +8,9 @@ RUN npm install
 
 COPY . /app/
 
+RUN NPM build
+
 EXPOSE 4000
 CMD [ "npm", "start"]
+
+
